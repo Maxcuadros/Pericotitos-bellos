@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pericotitos Bellos - colección de ropa para mujer con pedidos por WhatsApp.">
+  <title>Pericotitos Bellos | Moda para mujer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=12">
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img class="brand-logo" src="logo-pericotitos-bellos.png" alt="Logo de Pericotitos Bellos">
+        <span>Pericotitos Bellos</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#mujer">Mujer</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <button class="cart-toggle" id="cartToggle" type="button" aria-label="Abrir carrito">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 3h2l2.1 10.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L20 7H6M9 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm8 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <img class="hero-logo" src="logo-pericotitos-bellos.png" alt="Pericotitos Bellos">
+        <p class="eyebrow">Colección Mujer</p>
+        <h1>Pericotitos Bellos</h1>
+        <p class="hero-text">Prendas femeninas versátiles para acompañarte todos los días. Revisa los detalles y realiza tu pedido directamente por WhatsApp.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#mujer">Ver colección</a>
+          <a class="btn btn-secondary" id="heroWhatsapp" href="#" target="_blank" rel="noopener">Comprar por WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-panel reveal" aria-label="Prenda destacada de la colección Mujer">
+        <div class="floating-tag tag-one">Mujer</div>
+        <div class="floating-tag tag-two">6 prendas</div>
+        <div class="hero-card">
+          <img src="assets/capa-dakota-nueva.jpg" alt="Capa Dakota">
+          <div class="hero-card-info">
+            <span>Nueva selección</span>
+            <strong>Detalles pensados para ti</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section products-section" id="mujer">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Mujer</p>
+        <h2>Nuestra colección</h2>
+        <p>Selecciona una prenda para ver la imagen completa y comprar por WhatsApp.</p>
+      </div>
+      <p class="shop-notice" id="shopNotice" role="status" aria-live="polite" hidden></p>
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <section class="section about-section" id="nosotros">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Nosotros</p>
+        <h2>Moda femenina con atención personalizada</h2>
+      </div>
+      <div class="about-grid">
+        <article class="about-copy reveal">
+          <p>En Pericotitos Bellos seleccionamos prendas para mujer que combinan comodidad, estilo y versatilidad.</p>
+          <p>Atendemos por WhatsApp para brindarte información de tallas, colores, disponibilidad y coordinar tu pedido.</p>
+          <div class="social-links" aria-label="Redes sociales de Pericotitos Bellos">
+            <a class="social-link" href="#" aria-label="Instagram de Pericotitos Bellos"><span>IG</span></a>
+            <a class="social-link" href="https://wa.me/51906615728" target="_blank" rel="noopener" aria-label="WhatsApp de Pericotitos Bellos"><span>WA</span></a>
+            <a class="social-link" href="#" aria-label="Facebook de Pericotitos Bellos"><span>FB</span></a>
+            <a class="social-link" href="#" aria-label="TikTok de Pericotitos Bellos"><span>TK</span></a>
+          </div>
+        </article>
+        <div class="about-stats reveal">
+          <div><strong>1</strong><span>Categoría</span></div>
+          <div><strong>6</strong><span>Prendas</span></div>
+          <div><strong>100%</strong><span>Pedido por WhatsApp</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto">
+      <div class="contact-card reveal">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2>¿Lista para elegir tu favorita?</h2>
+          <p>Escríbenos para consultar tallas, colores y disponibilidad.</p>
+        </div>
+        <div class="contact-info">
+          <a href="https://wa.me/51906615728" target="_blank" rel="noopener">WhatsApp: 906615728</a>
+          <a href="mailto:mmarchena108@gmail.com">mmarchena108@gmail.com</a>
+          <p><strong>Horario:</strong> <span id="businessHours">Lunes a sábado de 8:00 a.m. a 8:00 p.m.</span></p>
+        </div>
+        <a class="btn btn-primary" id="contactWhatsapp" href="#" target="_blank" rel="noopener">Comprar por WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalProductName" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel">
+      <button class="modal-close" type="button" aria-label="Cerrar detalle" data-close-modal>&times;</button>
+      <div class="modal-media">
+        <img id="modalProductImage" src="" alt="">
+      </div>
+      <div class="modal-info">
+        <p class="eyebrow">Mujer</p>
+        <h2 id="modalProductName"></h2>
+        <p class="modal-price" id="modalProductPrice"></p>
+        <p class="modal-stock" id="modalProductStock"></p>
+        <p>Consulta tallas, colores y disponibilidad directamente por WhatsApp.</p>
+        <div class="product-options modal-options">
+          <label>Talla<select id="modalSize"></select></label>
+          <label>Color<select id="modalColor"></select></label>
+        </div>
+        <button class="btn btn-primary" id="modalAddToCart" type="button">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true">
+    <div class="cart-backdrop" data-close-cart></div>
+    <div class="cart-panel">
+      <header class="cart-header">
+        <div>
+          <p class="eyebrow">Tu selección</p>
+          <h2 id="cartTitle">Carrito</h2>
+        </div>
+        <button class="icon-button" type="button" aria-label="Cerrar carrito" title="Cerrar carrito" data-close-cart>&times;</button>
+      </header>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty" id="cartEmpty">
+        <strong>Tu carrito está vacío</strong>
+        <p>Agrega una prenda para comenzar tu pedido.</p>
+      </div>
+      <footer class="cart-footer">
+        <div class="cart-total"><span>Total</span><strong id="cartTotal">S/0</strong></div>
+        <button class="btn btn-primary" id="payNowButton" type="button">Pagar ahora</button>
+      </footer>
+    </div>
+  </aside>
+
+  <div class="payment-modal" id="paymentModal" role="dialog" aria-modal="true" aria-labelledby="paymentTitle" hidden>
+    <div class="modal-backdrop" data-close-payment></div>
+    <div class="payment-panel">
+      <button class="modal-close" type="button" aria-label="Cerrar pago" data-close-payment>&times;</button>
+      <div class="payment-copy">
+        <p class="eyebrow">Pago del pedido</p>
+        <h2 id="paymentTitle">Escanea el QR</h2>
+        <p>Escanea el QR, realiza el pago y luego envía tu comprobante por WhatsApp.</p>
+        <div class="payment-total"><span>Monto total</span><strong id="paymentTotal">S/0</strong></div>
+      </div>
+      <img class="payment-qr" src="assets/img/qr-yape.jpg" alt="Código QR para realizar el pago">
+      <button class="btn btn-primary" id="sendReceiptButton" type="button">Ya pagué, enviar comprobante por WhatsApp</button>
+      <p class="payment-status" id="paymentStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Pericotitos Bellos - Moda para mujer.</p>
+    <p>Página optimizada para GitHub Pages.</p>
+    <a href="admin.html">Administrar stock</a>
+  </footer>
+
+  <a class="whatsapp-float" id="floatingWhatsapp" href="#" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp"><span>WA</span></a>
+  <script type="module" src="script.js?v=13"></script>
+</body>
+</html>

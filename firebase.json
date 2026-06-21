@@ -1,15 +1,10 @@
 {
-  "firestore": {
-    "rules": "firestore.rules"
-  },
   "hosting": {
     "public": ".",
     "ignore": [
-      "firebase.json",
-      "FIREBASE-SETUP.md",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "cleanUrls": true
+      ".github/**",
+      ".git/**",
+      "node_modules/**"
+    ]
   }
 }

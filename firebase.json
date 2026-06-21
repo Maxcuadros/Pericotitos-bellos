@@ -7,8 +7,6 @@
     "ignore": [
       "firebase.json",
       "FIREBASE-SETUP.md",
-      "GITHUB-FIREBASE-DEPLOY.md",
-      "firestore.rules",
       "**/.*",
       "**/node_modules/**"
     ],

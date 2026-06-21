@@ -3,7 +3,10 @@ service cloud.firestore {
   match /databases/{database}/documents {
     function isAdmin() {
       return request.auth != null
-        && request.auth.uid == "iAyjeSpsAITDPjVglyQgIh2IWVr2";
+        && request.auth.uid in [
+          "iAyjeSpsAITDPjVglyQgIh2IWVr2",
+          "rrWXbaM2W0h8UVXYdWdnmHPqMZw1"
+        ];
     }
 
     match /products/{productId} {

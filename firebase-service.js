@@ -1,4 +1,4 @@
-import { firebaseConfig, !ADMIN_EMAIL, ADMIN_UID,AUTH_USERS} from "./firebase-config.js";
+import { firebaseConfig, ADMIN_EMAIL, ADMIN_UID } from "./firebase-config.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
   addDoc,
@@ -133,18 +133,10 @@ export async function adminSignIn(email, password) {
     if (!email || !password) throw new Error("Ingresa correo y contrasena.");
     return { uid: "local-admin", email };
   }
-  
- const credential = await signInWithEmailAndPassword(auth, email, password);
-const authenticatedEmail = credential.user.email?.trim().toLowerCase();
-const isAuthorized = AUTH_USERS.some(
-  (user) => user.email?.trim().toLowerCase() === authenticatedEmail
-);
-if (!isAuthorized) {
-  await signOut(auth);
-  throw new Error("Este usuario no tiene permisos de administrador.");
-}
+  const credential = await signInWithEmailAndPassword(auth, email, password);
 return credential.user;
 }
+
 export function observeAdminSession(callback) {
   if (!auth) {
     callback(null);

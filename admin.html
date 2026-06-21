@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Administración | Pericotitos Bellos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="admin.css?v=2">
+</head>
+<body class="admin-body">
+  <header class="admin-header">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="logo-pericotitos-bellos.png" alt="Pericotitos Bellos">
+      <span>Pericotitos Bellos</span>
+    </a>
+    <a class="btn btn-secondary" href="index.html">Volver a la tienda</a>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-login" id="loginSection">
+      <p class="eyebrow">Acceso privado</p>
+      <h1>Administración</h1>
+      <p>Inicia sesión con el usuario administrador configurado en Firebase Authentication.</p>
+      <form id="loginForm">
+        <label>Correo<input id="adminEmail" type="email" autocomplete="username" required></label>
+        <label>Contraseña<input id="adminPassword" type="password" autocomplete="current-password" required></label>
+        <button class="btn btn-primary" type="submit">Ingresar</button>
+      </form>
+      <p class="admin-message" id="loginMessage" role="status"></p>
+    </section>
+
+    <section class="admin-dashboard" id="dashboardSection" hidden>
+      <div class="admin-titlebar">
+        <div>
+          <p class="eyebrow">Panel de control</p>
+          <h1>Stock y pedidos</h1>
+          <p id="connectionMode"></p>
+        </div>
+        <div class="admin-actions">
+          <button class="btn btn-secondary" id="initializeProducts" type="button">Inicializar productos</button>
+          <button class="btn btn-secondary" id="logoutButton" type="button">Cerrar sesión</button>
+        </div>
+      </div>
+
+      <p class="admin-message" id="adminMessage" role="status" aria-live="polite"></p>
+
+      <section class="admin-section">
+        <div class="admin-section-heading">
+          <h2>Inventario</h2>
+          <p>Los cambios se reflejan en la tienda en tiempo real.</p>
+        </div>
+        <div class="stock-grid" id="stockGrid"></div>
+      </section>
+
+      <section class="admin-section">
+        <div class="admin-section-heading">
+          <h2>Pedidos pendientes</h2>
+          <p>Marca un pedido como pagado únicamente después de verificar el comprobante.</p>
+        </div>
+        <div class="orders-list" id="ordersList"></div>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="admin.js?v=3"></script>
+</body>
+</html>

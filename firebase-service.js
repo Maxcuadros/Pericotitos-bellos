@@ -133,9 +133,18 @@ export async function adminSignIn(email, password) {
     if (!email || !password) throw new Error("Ingresa correo y contrasena.");
     return { uid: "local-admin", email };
   }
-  const credential = await signInWithEmailAndPassword(auth, email, password); if (!AUTH_USERS.some(x => x.email ==email)) { await signOut(auth); throw new Error("Este usuario no tiene permisos de administrador."); } return credential.user;
+  
+ const credential = await signInWithEmailAndPassword(auth, email, password);
+const authenticatedEmail = credential.user.email?.trim().toLowerCase();
+const isAuthorized = AUTH_USERS.some(
+  (user) => user.email?.trim().toLowerCase() === authenticatedEmail
+);
+if (!isAuthorized) {
+  await signOut(auth);
+  throw new Error("Este usuario no tiene permisos de administrador.");
 }
-
+return credential.user;
+}
 export function observeAdminSession(callback) {
   if (!auth) {
     callback(null);

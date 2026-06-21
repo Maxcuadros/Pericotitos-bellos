@@ -1,3 +1,4 @@
+// Reemplaza estos valores con los datos de Configuracion del SDK web en Firebase Console.
 export const firebaseConfig = {
   apiKey: "AIzaSyDXHDFDvvzPvBbfw2l6kdT8lhSaptbIGkc",
   authDomain: "pericotitosbellos.firebaseapp.com",
@@ -19,4 +20,4 @@ export const AUTH_USERS = [
     email: "max924267559@gmail.com",
     uid: "rrWXbaM2W0h8UVXYdWdnmHPqMZw1"
   }
-]
+];

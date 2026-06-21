@@ -1,4 +1,4 @@
-import { firebaseConfig, ADMIN_EMAIL, ADMIN_UID,AUTH_USERS} from "./firebase-config.js";
+import { firebaseConfig, !ADMIN_EMAIL, ADMIN_UID,AUTH_USERS} from "./firebase-config.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
   addDoc,

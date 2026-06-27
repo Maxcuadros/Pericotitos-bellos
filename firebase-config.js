@@ -8,6 +8,9 @@ export const firebaseConfig = {
   appId: "1:1046536329612:web:996a65c5d5d51d931f5ea9",
   measurementId: "G-5TVS3SZHV6",
 };
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 // Debe corresponder al usuario administrador de Firebase Authentication.
 export const ADMIN_EMAIL = "mmarchena108@gmail.com";
 export const ADMIN_UID = "iAyjeSpsAITDPjVglyQgIh2IWVr2";
